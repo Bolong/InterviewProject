@@ -35,12 +35,10 @@
     </figure>
   </article>
   <script type="text/javascript">
-
-
  
      window.onload = function(){
 
-      var city = document.getElementsByName("city")[0]; 
+      var city = document.getElementsByName("city")[0]; //these return HTML collections, like array.
       var zipcode = document.getElementsByName("zipcode")[0];
       var oBtn = document.getElementById('btn');
       var oCon = document.getElementById('results');
@@ -54,7 +52,7 @@
           }
           if(zipcode.value.length !=0){
             q= "zip=" + zipcode.value;
-            var pattern= /(^\d{5}$)|(^\d{5}-\d{4}$)/;
+            var pattern= /(^\d{5}$)|(^\d{5}-\d{4}$)/; //this is based on US zip code 5-4, usually we use 5 numbers, but sometimes with another 4 numbers
 		if(!pattern.test(zipcode.value)) {  
    		alert("please enter a correct zipcode :)"); 
    		zipcode.value=""; 
@@ -62,9 +60,10 @@
      		return false;  
 		} 
           }
-		  if(city.value.length == 0 && zipcode.value.length ==0){
-			alert("Please enter a city name or a zipcode :)");
-			  }
+	  if(city.value.length == 0 && zipcode.value.length ==0){
+		alert("Please enter a city name or a zipcode :)");
+		}
+		
           var tempVal=document.getElementById('temp').value;    
           var tempTxt = "Kelvin";
           if(tempVal != ""){
@@ -79,7 +78,7 @@
           ajax('http://api.openweathermap.org/data/2.5/weather?' + q,
 
             function(str){
-             var str =JSON.parse(str);
+             var str =JSON.parse(str); //return data as a JSON
              var html = '<ul>';
                  html += '<li>CityId : <code>'+str.id+'</code></li>';
                  html +='<li>CityName : <code>'+str.name+'</li>';
