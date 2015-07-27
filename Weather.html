@@ -54,6 +54,13 @@
           }
           if(zipcode.value.length !=0){
             q= "zip=" + zipcode.value;
+            var pattern= /(^\d{5}$)|(^\d{5}-\d{4}$)/;
+		if(!pattern.test(zipcode.value)) {  
+   		alert("please enter a correct zipcode :)"); 
+   		zipcode.value=""; 
+   		zipcode.focus(); 
+     		return false;  
+		} 
           }
 		  if(city.value.length == 0 && zipcode.value.length ==0){
 			alert("Please enter a city name or a zipcode :)");
