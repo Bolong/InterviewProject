@@ -73,29 +73,29 @@
 
             function(str){
              var str =JSON.parse(str);
-                var html = '<ul>';
-                    html += '<li>CityId : <code>'+str.id+'</code></li>';
-                    html +='<li>CityName : <code>'+str.name+'</li>';
-                    html +='<ul>Coordinate :';
-                    html += '<li> lon:'+str.coord['lon']+'</li>';
-                    html += '<li> lat:'+str.coord['lat']+'</li></ul>';
-					html += '<br>';
-                    html +='<ul>Weather :';
-                    html += '<li> weatherid :'+str.weather[0]['id']+'</li>';
-                    html += '<li> weather condition :'+str.weather[0]['main']+'</li>';
-                    html += '<li> weather icon id:'+str.weather[0]['icon']+'</li>';
-					html += '<li> weather icon :'+'<img src="http://openweathermap.org/img/w/'+str.weather[0]['icon']+'.png"/>'+'</li>';
-                    html += '<li> description :'+str.weather[0]['description']+'</li></ul>';
-					html += '<br>';
-                    html +='<ul>Temperature :';
-                    html += '<li> current temperature :'+str.main['temp']+'</li>';
-                    html += '<li> lowest temperature :'+str.main['temp_min']+'</li>';
-                    html += '<li> highest temperature :'+str.main['temp_max']+'</li>';
-                    html += '<li> temperature unit :'+tempTxt+'</li></ul>';
-					html += '<br>';
-                    html +='<ul>Wind :';
-                    html += '<li> speed :'+str.wind.speed+'</li>';
-                    html += '<li> degree :'+str.wind.deg+'</li></ul>';
+             var html = '<ul>';
+                 html += '<li>CityId : <code>'+str.id+'</code></li>';
+                 html +='<li>CityName : <code>'+str.name+'</li>';
+                 html +='<ul>Coordinate :';
+                 html += '<li> lon:'+str.coord['lon']+'</li>';
+                 html += '<li> lat:'+str.coord['lat']+'</li></ul>';
+		 html += '<br>';
+                 html +='<ul>Weather :';
+                 html += '<li> weatherid :'+str.weather[0]['id']+'</li>';
+                 html += '<li> weather condition :'+str.weather[0]['main']+'</li>';
+                 html += '<li> weather icon id:'+str.weather[0]['icon']+'</li>';
+		 html += '<li> weather icon :'+'<img src="http://openweathermap.org/img/w/'+str.weather[0]['icon']+'.png"/>'+'</li>';
+                 html += '<li> description :'+str.weather[0]['description']+'</li></ul>';
+		 html += '<br>';
+                 html +='<ul>Temperature :';
+                 html += '<li> current temperature :'+str.main['temp']+'</li>';
+                 html += '<li> lowest temperature :'+str.main['temp_min']+'</li>';
+                 html += '<li> highest temperature :'+str.main['temp_max']+'</li>';
+                 html += '<li> temperature unit :'+tempTxt+'</li></ul>';
+		 html += '<br>';
+                 html +='<ul>Wind :';
+                 html += '<li> speed :'+str.wind.speed+'</li>';
+                 html += '<li> degree :'+str.wind.deg+'</li></ul>';
 
 
                  oCon.innerHTML = html;
